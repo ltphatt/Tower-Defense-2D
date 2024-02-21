@@ -14,7 +14,6 @@ public class WaveConfigSO : ScriptableObject
     [SerializeField] float spawnTimeVariance = 0f;
     [SerializeField] float minimumSpawnTime = 0.2f;
 
-
     public int GetEnemyCount()
     {
         return enemyPrefabs.Count;
@@ -50,5 +49,4 @@ public class WaveConfigSO : ScriptableObject
         float spawnTime = Random.Range(timeBetweenEnemySpawns - spawnTimeVariance, timeBetweenEnemySpawns + spawnTimeVariance);
         return Mathf.Clamp(spawnTime, minimumSpawnTime, float.MaxValue);
     }
-
 }

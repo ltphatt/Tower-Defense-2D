@@ -13,9 +13,18 @@ MonoBehaviour:
   m_Name: Wave 1
   m_EditorClassIdentifier: 
   pathPrefab: {fileID: 1662141866699327485, guid: fe04d84873e23d54093edc0c5cdf13f5, type: 3}
-  moveSpeed: 5
+  moveSpeed: 2
   enemyPrefabs:
-  - {fileID: 5574192184344300979, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
+  - {fileID: 2255885202117656326, guid: fc9263cc7619e5947983e19d801e45c8, type: 3}
   timeBetweenEnemySpawns: 1
-  spawnTimeVariance: 0
-  minimumSpawnTime: 0.2
+  spawnTimeVariance: 0.5
+  minimumSpawnTime: 1
