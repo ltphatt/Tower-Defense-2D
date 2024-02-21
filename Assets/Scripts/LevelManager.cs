@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public Transform[] path;
-    public Transform point;
+    public Transform startPoint;
     public static LevelManager instance;
 
     private void Awake()
