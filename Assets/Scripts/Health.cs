@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
 {
     [Header("Attributes")]
     [SerializeField] private int health = 3;
-
+    [SerializeField] private int reward = 50;
 
     void TakeDamage(int dmg)
     {
@@ -20,6 +20,7 @@ public class Health : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        LevelManager.instance.IncreaseCurrency(reward);
     }
 
     public int GetHealth()
