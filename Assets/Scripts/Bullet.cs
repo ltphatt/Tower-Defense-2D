@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 5f;
+    [SerializeField] private int damage = 1;
 
     public Transform target;
 
@@ -34,11 +35,11 @@ public class Bullet : MonoBehaviour
         this.target = target;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        // Take damage
-        Destroy(gameObject);
-    }
+    // private void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     // Take damage
+    //     Destroy(gameObject);
+    // }
 
     void RotateFollowEnemy()
     {
@@ -47,5 +48,10 @@ public class Bullet : MonoBehaviour
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    public int GetDamage()
+    {
+        return damage;
     }
 }
