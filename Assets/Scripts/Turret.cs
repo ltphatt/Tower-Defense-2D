@@ -9,12 +9,16 @@ public class Turret : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform turretRotatePoint;
     [SerializeField] private LayerMask enemyMask;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotateSpeed = 5f;
+    [SerializeField] private float bulletPerSec = 2f;
 
-    private Transform target;
+    private Transform target = null;
+    private float timeUntilFire;
 
     // Vẽ tầm bắn cho trụ
     private void OnDrawGizmosSelected()
@@ -32,10 +36,29 @@ public class Turret : MonoBehaviour
         }
 
         RotateTowardsTarget();
+
         if (!CheckTargetIsInRange())
         {
             target = null;
         }
+        else
+        {
+            timeUntilFire += Time.deltaTime;
+
+            if (timeUntilFire >= 1f / bulletPerSec)
+            {
+                Shoot();
+                timeUntilFire = 0f;
+            }
+        }
+    }
+
+    void Shoot()
+    {
+        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+
+        Bullet bullet = bulletObj.GetComponent<Bullet>();
+        bullet.SetTarget(target);
     }
 
     // Tìm mục tiêu
