@@ -16,6 +16,7 @@ public class Turret : MonoBehaviour
 
     private Transform target;
 
+    // Vẽ tầm bắn cho trụ
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.green;
@@ -37,22 +38,26 @@ public class Turret : MonoBehaviour
         }
     }
 
+    // Tìm mục tiêu
     void FindTarget()
     {
+        // Trả về một mảng các đối tượng mà circle cast va chạm
         RaycastHit2D[] hits = Physics2D.CircleCastAll(
-            transform.position,
-            targetingRange,
-            (Vector2)transform.position,
-            0f,
-            enemyMask
+            transform.position, // Vị trí trung tâm của CircleCast (Vị trí của object mà script đính kèm)
+            targetingRange,     // Bán kính CircleCast
+            (Vector2)transform.position,    // Hướng của CircleCast
+            0f,                             // Góc quay, 0f = full 1 vòng tròn
+            enemyMask                       // Circle chỉ tương tác với mask enemy
         );
 
+        // Nếu mảng hits chứa phần tử, phần tử đầu tiên sẽ là target cho trụ
         if (hits.Length > 0)
         {
             target = hits[0].transform;
         }
     }
 
+    // Hướng trụ về mục tiêu
     void RotateTowardsTarget()
     {
         float angle = Mathf.Atan2(target.position.y - transform.position.y,
@@ -61,6 +66,7 @@ public class Turret : MonoBehaviour
         turretRotatePoint.rotation = Quaternion.RotateTowards(turretRotatePoint.rotation, targetRotation, rotateSpeed);
     }
 
+    // Kiểm tra mục tiêu có trong tầm bắn không
     bool CheckTargetIsInRange()
     {
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
