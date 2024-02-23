@@ -34,8 +34,16 @@ public class Plot : MonoBehaviour
 
         if (!isOccupied)
         {
-            GameObject builtTower = BuildManager.instance.GetSelectedTower();
-            Instantiate(builtTower, transform.position, Quaternion.identity);
+            Tower builtTower = BuildManager.instance.GetSelectedTower();
+
+            if (builtTower.cost > LevelManager.instance.currency)
+            {
+                Debug.Log("You can't afford this tower!");
+                return;
+            }
+
+            LevelManager.instance.SpendCurrency(builtTower.cost);
+            Instantiate(builtTower.prefab, transform.position, Quaternion.identity);
             isOccupied = true;
         }
     }
