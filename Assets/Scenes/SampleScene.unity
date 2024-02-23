@@ -893,6 +893,7 @@ GameObject:
   - component: {fileID: 136821240}
   - component: {fileID: 136821239}
   - component: {fileID: 136821238}
+  - component: {fileID: 136821241}
   m_Layer: 5
   m_Name: Turret Button (1)
   m_TagString: Untagged
@@ -1014,6 +1015,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136821236}
   m_CullTransparentMesh: 1
+--- !u!95 &136821241
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136821236}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6560e25a057eb5f42ae3688b5c579184, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &140086388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1118,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 140086391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1549344973}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: ToggleMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &140086391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9892,6 +9926,7 @@ GameObject:
   - component: {fileID: 1549344972}
   - component: {fileID: 1549344971}
   - component: {fileID: 1549344973}
+  - component: {fileID: 1549344974}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -9973,6 +10008,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 1181682193}
+  anim: {fileID: 1549344974}
+--- !u!95 &1549344974
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549344969}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75bba2c31a3e93f4d8981455befba818, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1579459957
 PrefabInstance:
   m_ObjectHideFlags: 0
