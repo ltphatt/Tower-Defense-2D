@@ -11203,6 +11203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveConfigs:
   - {fileID: 11400000, guid: c0cbd18097d0dd041b72129ca744286d, type: 2}
+  - {fileID: 11400000, guid: 2100d648521ad554a980312636eafec4, type: 2}
   timeBetweenWaves: 1
   isLooping: 1
 --- !u!1001 &1685925419
