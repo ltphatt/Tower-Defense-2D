@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PathFinder : MonoBehaviour
 {
@@ -34,6 +35,13 @@ public class PathFinder : MonoBehaviour
             Vector3 target = waypoints[waypointIndex].position;
             float delta = waveConfig.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target, delta);
+
+            // Chỉnh hướng xoay tại đây
+            float angle = Mathf.Atan2(target.y - transform.position.y,
+             target.x - transform.position.x) * Mathf.Rad2Deg;
+            Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 5f);
+
             if (transform.position == target)
             {
                 waypointIndex++;
@@ -44,4 +52,5 @@ public class PathFinder : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
