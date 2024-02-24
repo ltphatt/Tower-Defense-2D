@@ -12,8 +12,24 @@ public class BuildManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        // instance = this;
+        ManageSingleton();
     }
+
+    void ManageSingleton()
+    {
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
 
     public Tower GetSelectedTower()
     {

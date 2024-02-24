@@ -9,7 +9,22 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        // instance = this;
+        ManageSingleton();
+    }
+
+    void ManageSingleton()
+    {
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void Start()
