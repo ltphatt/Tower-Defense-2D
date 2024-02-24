@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private int health = 3;
     [SerializeField] private int reward = 50;
+    [SerializeField] ParticleSystem explosionEffect;
 
     void TakeDamage(int dmg)
     {
@@ -35,7 +36,17 @@ public class Health : MonoBehaviour
         if (bullet != null)
         {
             TakeDamage(bullet.GetDamage());
+            PlayExplosionEffect();
             Destroy(bullet.gameObject);
+        }
+    }
+
+    void PlayExplosionEffect()
+    {
+        if (explosionEffect != null)
+        {
+            ParticleSystem instance = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
         }
     }
 }

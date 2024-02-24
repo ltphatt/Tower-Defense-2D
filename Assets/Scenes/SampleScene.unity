@@ -10251,7 +10251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 61.586, y: 0}
+  m_AnchoredPosition: {x: 61.585938, y: 0}
   m_SizeDelta: {x: 123.17, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1549344971
@@ -11202,8 +11202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigs:
+  - {fileID: 11400000, guid: e0fd5d0ea3c8bac488765790137262d4, type: 2}
   - {fileID: 11400000, guid: c0cbd18097d0dd041b72129ca744286d, type: 2}
   - {fileID: 11400000, guid: 2100d648521ad554a980312636eafec4, type: 2}
+  - {fileID: 11400000, guid: a3a3de9bac5ffe7408a9f1640f7b3de3, type: 2}
+  - {fileID: 11400000, guid: 9cc9ee951e357fa40b4367777ed4bdfa, type: 2}
   timeBetweenWaves: 1
   isLooping: 1
 --- !u!1001 &1685925419

@@ -176,3 +176,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 15
   reward: 40
+  explosionEffect: {fileID: 6221854723939608023, guid: 813c90559203fdd48929fa8b7f33c3aa, type: 3}

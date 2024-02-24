@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float bulletSpeed = 5f;
     [SerializeField] private int damage = 1;
 
+
     public Transform target;
 
     void Start()
@@ -34,12 +35,6 @@ public class Bullet : MonoBehaviour
     {
         this.target = target;
     }
-
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     // Take damage
-    //     Destroy(gameObject);
-    // }
 
     void RotateFollowEnemy()
     {
