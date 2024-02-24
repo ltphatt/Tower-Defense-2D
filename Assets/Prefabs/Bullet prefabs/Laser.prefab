@@ -279,6 +279,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  bulletSpeed: 10
+  bulletSpeed: 8
   damage: 2
   target: {fileID: 0}
