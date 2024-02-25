@@ -32,6 +32,7 @@ public class PathFinder : MonoBehaviour
     {
         if (waypointIndex < waypoints.Count)
         {
+            // Move to next point
             Vector3 target = waypoints[waypointIndex].position;
             float delta = waveConfig.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target, delta);
@@ -52,5 +53,4 @@ public class PathFinder : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

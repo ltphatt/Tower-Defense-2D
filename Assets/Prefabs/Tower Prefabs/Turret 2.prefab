@@ -252,8 +252,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3095306145062177826, guid: 8dc3f430e8f949f43b2e594ad94067c0, type: 3}
   firingPoint: {fileID: 4653248202892671989}
   targetingRange: 2
-  rotateSpeed: 2
-  bulletPerSec: 1
+  rotateSpeed: 3.5
+  bulletPerSec: 1.25
 --- !u!1 &6163253479515392441
 GameObject:
   m_ObjectHideFlags: 0

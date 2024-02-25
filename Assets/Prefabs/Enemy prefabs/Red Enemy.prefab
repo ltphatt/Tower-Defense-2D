@@ -174,6 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04c82d3233edf949af50455570631f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  reward: 100
+  health: 40
+  reward: 60
   explosionEffect: {fileID: 6221854723939608023, guid: 813c90559203fdd48929fa8b7f33c3aa, type: 3}
