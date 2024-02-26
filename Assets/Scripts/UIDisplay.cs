@@ -7,16 +7,34 @@ public class UIDisplay : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] private Slider healthSlider;
+    [SerializeField] Image fillImage;
 
     void Start()
     {
         healthSlider.maxValue = LevelManager.instance.playerHealth;
-        Debug.Log("Start HP: " + LevelManager.instance.playerHealth.ToString());
     }
 
     void Update()
     {
         healthSlider.value = LevelManager.instance.playerHealth;
-        Debug.Log(LevelManager.instance.playerHealth);
+        ModifyColorHPBar();
+    }
+
+    void ModifyColorHPBar()
+    {
+        int hp = LevelManager.instance.playerHealth;
+
+        if (hp < 20)
+        {
+            fillImage.color = Color.red;
+        }
+        else if (hp < 60)
+        {
+            fillImage.color = Color.yellow;
+        }
+        else
+        {
+            fillImage.color = Color.green;
+        }
     }
 }
