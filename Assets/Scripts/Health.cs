@@ -6,8 +6,15 @@ public class Health : MonoBehaviour
 {
     [Header("Attributes")]
     [SerializeField] private int health = 3;
-    [SerializeField] private int reward = 50;
+    [SerializeField] private int coinReward = 50;
+    [SerializeField] private int scoreReward = 10;
     [SerializeField] ParticleSystem explosionEffect;
+    ScoreKeeper scoreKeeper;
+
+    void Start()
+    {
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+    }
 
     void TakeDamage(int dmg)
     {
@@ -20,8 +27,9 @@ public class Health : MonoBehaviour
 
     void Die()
     {
+        scoreKeeper.ModifyScore(scoreReward);
         Destroy(gameObject);
-        LevelManager.instance.IncreaseCurrency(reward);
+        LevelManager.instance.IncreaseCurrency(coinReward);
     }
 
     public int GetHealth()

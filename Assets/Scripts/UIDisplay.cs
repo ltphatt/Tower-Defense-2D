@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class UIDisplay : MonoBehaviour
 {
@@ -9,13 +11,20 @@ public class UIDisplay : MonoBehaviour
     [SerializeField] private Slider healthSlider;
     [SerializeField] Image fillImage;
 
+    [Header("Score")]
+    [SerializeField] private TextMeshProUGUI scoreText;
+    ScoreKeeper scoreKeeper;
+
     void Start()
     {
         healthSlider.maxValue = LevelManager.instance.playerHealth;
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+
     }
 
     void Update()
     {
+        scoreText.text = $"Score: {scoreKeeper.GetScore().ToString()}";
         healthSlider.value = LevelManager.instance.playerHealth;
         ModifyColorHPBar();
     }
@@ -37,4 +46,5 @@ public class UIDisplay : MonoBehaviour
             fillImage.color = Color.green;
         }
     }
+
 }

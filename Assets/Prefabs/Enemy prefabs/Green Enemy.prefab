@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e535f1d9a21d8640a5c6e0b00ff0e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToPlayer: 10
 --- !u!114 &-8712116671017168089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,5 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  reward: 15
+  coinReward: 10
+  scoreReward: 1
   explosionEffect: {fileID: 6221854723939608023, guid: 813c90559203fdd48929fa8b7f33c3aa, type: 3}
