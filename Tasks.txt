@@ -83,6 +83,7 @@ Hiện tại:
 	- Thêm điểm số khi tiêu diệt quái
 	- Tối ưu giao diện game (Đưa shop xuống phía dưới màn hình và bỏ animation)
 	- Custom cursor
+	- Thêm thanh tiến trình sinh quái trong 1 level 
 	-------------------------------------------------------------------
 Tương lai gần:
 	- Thiết kế giao diện Menu sảnh chính (Bắt đầu, Cài đặt, Thoát)
