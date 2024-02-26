@@ -65,8 +65,9 @@ Phương thức:
 
 
 Tasks:
+Hiện tại:
 	- Thiết kế súng
-	- Thiết kế quái
+	- Thiết kế quái	
 	- Thiết kế đạn
 	- Tìm đường cho quái
 	- Tự động tìm mục tiêu trong tầm đánh cho tháp
@@ -79,8 +80,11 @@ Tasks:
 	- Thêm particle systems (Explosion Effects)
 	- Thêm máu cho người chơi
 	- Làm đồ họa cho thanh HP
-	
 	- Thêm điểm số khi tiêu diệt quái
+	- Tối ưu giao diện game (Đưa shop xuống phía dưới màn hình và bỏ animation)
+	- Custom cursor
+	-------------------------------------------------------------------
+Tương lai gần:
 	- Thiết kế giao diện Menu sảnh chính (Bắt đầu, Cài đặt, Thoát)
 	- Thêm canvas Pause Game
 	- Thêm nhạc trò chơi 
@@ -90,10 +94,13 @@ Tasks:
 	- Thiết kế 2 Level mới
 	- Thêm tính năng chuyển cảnh khi hoàn thành 1 Level
 	- Sửa logic game sao cho phù hợp với chức năng chuyển cảnh
-	- Cân bằng và tối ưu giao diện game (Đưa shop xuống phía dưới màn hình và bỏ animation)
 	- Realse game 
-	
-	
+	---------------------------------------------------------------------
+Tương lai xa:
+	- Thêm hệ thống item - power up
+		Đạt được khi tiêu diệt các kẻ địch phát sáng ngẫu nhiên
+		Các item gồm (x2 điểm trong n giây, hồi hp, ...)
+	- Thêm tính năng nâng cấp súng khi click vào 1 tháp cụ thể (Tăng tốc đánh, bắn làm chậm, bắn xuyên,...)
 	- Thêm tính năng level-selection
 	- Thêm súng mới: súng làm chậm, súng ném bom
 	- Thêm quái mới: Xe tank, Máy bay, Người khổng lồ

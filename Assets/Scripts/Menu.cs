@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] TextMeshProUGUI currencyUI;
-    [SerializeField] Animator anim;
+    // [SerializeField] Animator anim;
     private bool isMenuOpen = true;
     void Update()
     {
@@ -17,6 +17,6 @@ public class Menu : MonoBehaviour
     public void ToggleMenu()
     {
         isMenuOpen = !isMenuOpen;
-        anim.SetBool("MenuOpen", isMenuOpen);
+        // anim.SetBool("MenuOpen", isMenuOpen);
     }
 }
