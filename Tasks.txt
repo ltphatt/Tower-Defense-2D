@@ -1,0 +1,100 @@
+Tower Defense 2D (Top-Down)
+
+Các đối tượng chính
+1. Turret
+Thuộc tính:
+	- Tầm đánh
+	- Tốc độ xoay súng
+	- Tốc độ đánh 
+Phương thức:
+	- Shoot()
+	- FindTarget()
+	- RotateTowardsTarget()
+	- DrawTargetingRange()
+	- CheckTargetIsInRange()
+	
+2. Tower 
+Thuộc tính:
+	- Tên
+	- Giá tiền
+	- Mẫu turret
+
+3. Bullet
+Thuộc tính:
+	- Tốc độ đạn bay
+	- Sát thương
+Phương thức:
+	- RotateFollowEnemy()
+	- GetDamage()
+	- SetTarget()
+	
+4. Plot: Ô đặt tháp
+Thuộc tính: 
+	- Tháp
+	- isCoccupied
+Phương thức:
+	- OnMouseEnter()
+	- OnMouseHover()
+	- OnMouseDown()
+
+5. Quái 
+Thuộc tính:
+	- Máu
+	- Phần thưởng khi tiêu diệt 
+Phương thức:
+	- TakeDamage()
+	- Die()
+	
+6. Đợt quái 
+Thuộc tính:
+	- Đường đi
+	- Tốc độ di chuyển
+	- Danh sách quái
+	- Thời gian sinh quái 
+
+7. Đối tượng sinh quái
+Thuộc tính: 
+	- Đợt quái hiện tại
+	- Danh sách đợt quái
+	- Thời gian mỗi đợt
+	- isLooping
+Phương thức:
+	- SpawnEnemyWaves()
+	- GetCurrentWave()
+
+
+
+Tasks:
+	- Thiết kế súng
+	- Thiết kế quái
+	- Thiết kế đạn
+	- Tìm đường cho quái
+	- Tự động tìm mục tiêu trong tầm đánh cho tháp
+	- Tự động sinh quái ngẫu nhiên
+	- Đồ họa đơn giản, các pixel có sẵn trong Unity
+	- Cửa hàng tháp (Đơn giản)
+	- Thiết kế các ô đặt súng 
+	- Thiết kế đường đi, bản đồ trong game 1 level
+	- Thêm đồ họa game
+	- Thêm particle systems (Explosion Effects)
+	- Thêm máu cho người chơi
+	- Làm đồ họa cho thanh HP
+	
+	- Thêm điểm số khi tiêu diệt quái
+	- Thiết kế giao diện Menu sảnh chính (Bắt đầu, Cài đặt, Thoát)
+	- Thêm canvas Pause Game
+	- Thêm nhạc trò chơi 
+	- Thêm sound effect khi click
+	- Thêm màn hình Game Over
+	- Thêm màn hình hoàn thành Level (3 sao, tính sao dựa vào số HP còn lại sau mỗi trận)
+	- Thiết kế 2 Level mới
+	- Thêm tính năng chuyển cảnh khi hoàn thành 1 Level
+	- Sửa logic game sao cho phù hợp với chức năng chuyển cảnh
+	- Cân bằng và tối ưu giao diện game (Đưa shop xuống phía dưới màn hình và bỏ animation)
+	- Realse game 
+	
+	
+	- Thêm tính năng level-selection
+	- Thêm súng mới: súng làm chậm, súng ném bom
+	- Thêm quái mới: Xe tank, Máy bay, Người khổng lồ
+	
