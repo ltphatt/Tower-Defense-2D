@@ -11,6 +11,8 @@ public class PathFinder : MonoBehaviour
     int waypointIndex = 0;
     EnemySpawner enemySpawner;
 
+    [SerializeField] private int damageToPlayer = 10;
+
     void Awake()
     {
         enemySpawner = FindObjectOfType<EnemySpawner>();
@@ -51,6 +53,7 @@ public class PathFinder : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            LevelManager.instance.DamagedByEnemy(damageToPlayer);
         }
     }
 }

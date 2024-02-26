@@ -6,10 +6,10 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public int currency;
+    public int playerHealth;
 
     private void Awake()
     {
-        // instance = this;
         ManageSingleton();
     }
 
@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         currency = 100;
+        playerHealth = 100;
     }
 
     public void IncreaseCurrency(int amount)
@@ -55,4 +56,10 @@ public class LevelManager : MonoBehaviour
     {
         return currency;
     }
+
+    public void DamagedByEnemy(int dmg)
+    {
+        playerHealth -= dmg;
+    }
+
 }

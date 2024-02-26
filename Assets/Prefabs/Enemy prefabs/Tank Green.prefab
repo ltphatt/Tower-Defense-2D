@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8520312367408225228}
   - component: {fileID: 6316403270811189326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5681313338258992772}
   - component: {fileID: 4235562663170268357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 4103719786781619534}
   - component: {fileID: 7271342487929051464}
   - component: {fileID: 1431415046656645398}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,3 +304,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e535f1d9a21d8640a5c6e0b00ff0e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToPlayer: 10
