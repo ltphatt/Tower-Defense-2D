@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 1481339537846254130}
   hoverColor: {r: 0.0031327256, g: 0.47639373, b: 0.8301887, a: 0.5019608}
+  dropSound: {fileID: 8300000, guid: d65b2419fc9562240a3fc43811ae3f52, type: 3}
+  dropSoundVolume: 1
 --- !u!61 &-1481601304490102820
 BoxCollider2D:
   m_ObjectHideFlags: 0

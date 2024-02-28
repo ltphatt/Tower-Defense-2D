@@ -8,6 +8,10 @@ public class Plot : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
 
+    [Header("Drop Sound")]
+    [SerializeField] AudioClip dropSound;
+    [SerializeField][Range(0f, 1f)] float dropSoundVolume = 1f;
+
     bool isOccupied = false;
 
     private GameObject tower;
@@ -45,6 +49,8 @@ public class Plot : MonoBehaviour
             LevelManager.instance.SpendCurrency(builtTower.cost);
             Instantiate(builtTower.prefab, transform.position, Quaternion.identity);
             isOccupied = true;
+            AudioPlayer.instance.PlayClip(dropSound, dropSoundVolume);
         }
+
     }
 }

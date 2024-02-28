@@ -19,12 +19,11 @@ public class UIDisplay : MonoBehaviour
     {
         healthSlider.maxValue = LevelManager.instance.playerHealth;
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
-
     }
 
     void Update()
     {
-        scoreText.text = $"Score: {scoreKeeper.GetScore().ToString()}";
+        scoreText.text = $"Score: {scoreKeeper.GetScore().ToString("0000")}";
         healthSlider.value = LevelManager.instance.playerHealth;
         ModifyColorHPBar();
     }
