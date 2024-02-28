@@ -3256,6 +3256,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5318267514256553318, guid: 3b0e73ef18576284bb04fa4f00f499aa, type: 3}
   m_PrefabInstance: {fileID: 1245714756}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1245912348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2519008522931778586, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 552f67f8ab5902c48b6bc56e23630e1f, type: 3}
+    - target: {fileID: 2519008522931778586, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: clickSoundVolume
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983928507313792554, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_Name
+      value: AudioPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284650607587795028, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4301e772ec016744fb3c6f78e0d74d4b, type: 3}
+    - target: {fileID: 6284650607587795028, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628279323378443072, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3ed3bb6367b1d74f842124f1cc4482b, type: 3}
 --- !u!1001 &1298312261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4049,12 +4122,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigs:
-  - {fileID: 11400000, guid: 99073ffee74e2a949a2e95c7e2a7496c, type: 2}
   - {fileID: 11400000, guid: 3faa159a2e61b5e4d811d248a30fc89c, type: 2}
   - {fileID: 11400000, guid: cb8e894bec99cfe47b9edb0c940f77b8, type: 2}
   - {fileID: 11400000, guid: 1aa3a038fcdd66d42a076d0c4163aa98, type: 2}
   - {fileID: 11400000, guid: 3c8e7aab3240ff646afb145f492feb3b, type: 2}
   - {fileID: 11400000, guid: c45af4206f860f547a3358f96c80ff26, type: 2}
+  - {fileID: 11400000, guid: 99073ffee74e2a949a2e95c7e2a7496c, type: 2}
   timeBetweenWaves: 3
   isLooping: 1
 --- !u!4 &1529244981
@@ -8690,3 +8763,4 @@ SceneRoots:
   - {fileID: 1819723906}
   - {fileID: 1590435355}
   - {fileID: 888888531}
+  - {fileID: 1245912348}
