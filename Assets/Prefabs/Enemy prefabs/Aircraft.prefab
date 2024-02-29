@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e535f1d9a21d8640a5c6e0b00ff0e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applyCameraShake: 1
   damageToPlayer: 10
 --- !u!114 &3838891442941939223
 MonoBehaviour:

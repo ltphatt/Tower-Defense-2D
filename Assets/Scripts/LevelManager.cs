@@ -8,9 +8,13 @@ public class LevelManager : MonoBehaviour
     public int currency;
     public int playerHealth = 100;
 
+    CameraShake cameraShake;
+    [SerializeField] bool applyCameraShake;
+
     private void Awake()
     {
         ManageSingleton();
+        cameraShake = Camera.main.GetComponent<CameraShake>();
     }
 
     void ManageSingleton()
@@ -60,10 +64,19 @@ public class LevelManager : MonoBehaviour
     public void DamagedByEnemy(int dmg)
     {
         playerHealth -= dmg;
+        ShakeCamera();
     }
 
     public int GetPlayerHealth()
     {
         return playerHealth;
+    }
+
+    void ShakeCamera()
+    {
+        if (cameraShake != null && applyCameraShake)
+        {
+            cameraShake.PlayShakeCamera();
+        }
     }
 }

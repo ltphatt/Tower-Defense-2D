@@ -9,6 +9,8 @@ public class PathFinder : MonoBehaviour
     WaveConfigSO waveConfig;
     List<Transform> waypoints;
     int waypointIndex = 0;
+
+    [Header("References")]
     EnemySpawner enemySpawner;
 
     [SerializeField] private int damageToPlayer = 10;
@@ -56,4 +58,5 @@ public class PathFinder : MonoBehaviour
             LevelManager.instance.DamagedByEnemy(damageToPlayer);
         }
     }
+
 }
