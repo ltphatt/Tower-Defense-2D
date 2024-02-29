@@ -83,18 +83,22 @@ Hiện tại:
 	- Thêm điểm số khi tiêu diệt quái
 	- Tối ưu giao diện game (Đưa shop xuống phía dưới màn hình và bỏ animation)
 	- Custom cursor
-	- Thêm thanh tiến trình sinh quái trong 1 level 
-	-------------------------------------------------------------------
-Tương lai gần:
 	- Thiết kế giao diện Menu sảnh chính (Bắt đầu, Cài đặt, Thoát)
+	- Thêm thanh tiến trình sinh quái trong 1 level 
 	- Thêm canvas Pause Game
 	- Thêm nhạc trò chơi 
 	- Thêm sound effect khi click
+	-------------------------------------------------------------------
+Tương lai gần:
+	- Thêm sound effect khi tiêu diệt kẻ địch và nhận được point và coin
+	- Thêm particle system cho bullets
 	- Thêm màn hình Game Over
 	- Thêm màn hình hoàn thành Level (3 sao, tính sao dựa vào số HP còn lại sau mỗi trận)
 	- Thiết kế 2 Level mới
 	- Thêm tính năng chuyển cảnh khi hoàn thành 1 Level
 	- Sửa logic game sao cho phù hợp với chức năng chuyển cảnh
+	- Test game
+	- Fix bugs
 	- Realse game 
 	---------------------------------------------------------------------
 Tương lai xa:

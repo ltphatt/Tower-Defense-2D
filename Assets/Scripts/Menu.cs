@@ -7,8 +7,8 @@ public class Menu : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] TextMeshProUGUI currencyUI;
-    // [SerializeField] Animator anim;
-    private bool isMenuOpen = true;
+    [SerializeField] Animator anim;
+    public static bool isMenuOpen = true;
     void Update()
     {
         currencyUI.text = $"Coins: {LevelManager.instance.currency}";
@@ -17,6 +17,6 @@ public class Menu : MonoBehaviour
     public void ToggleMenu()
     {
         isMenuOpen = !isMenuOpen;
-        // anim.SetBool("MenuOpen", isMenuOpen);
+        anim.SetBool("isOpenMenu", isMenuOpen);
     }
 }
