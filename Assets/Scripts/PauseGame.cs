@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,6 @@ public class PauseGame : MonoBehaviour
     public static bool isPauseGame = false;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameplay;
-
     void Update()
     {
         // Khi người chơi ấn nút ESC ở bàn phím

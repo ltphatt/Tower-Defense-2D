@@ -9,22 +9,36 @@ public class UIDisplay : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] private Slider healthSlider;
-    [SerializeField] Image fillImage;
+    [SerializeField] Image fillHP;
 
     [Header("Score")]
     [SerializeField] private TextMeshProUGUI scoreText;
     ScoreKeeper scoreKeeper;
 
+    [Header("Enemy Wave")]
+    [SerializeField] private Slider enemyWave;
+
+
+    [Header("References")]
+    EnemySpawner enemySpawner;
+
+    void Awake()
+    {
+        enemySpawner = FindObjectOfType<EnemySpawner>();
+    }
+
     void Start()
     {
         healthSlider.maxValue = LevelManager.instance.playerHealth;
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        enemyWave.maxValue = enemySpawner.GetWaveCount();
     }
 
     void Update()
     {
         scoreText.text = $"Score: {scoreKeeper.GetScore().ToString("0000")}";
         healthSlider.value = LevelManager.instance.playerHealth;
+        enemyWave.value = enemySpawner.GetWaveSpawned();
         ModifyColorHPBar();
     }
 
@@ -34,15 +48,15 @@ public class UIDisplay : MonoBehaviour
 
         if (hp < 20)
         {
-            fillImage.color = Color.red;
+            fillHP.color = Color.red;
         }
         else if (hp < 60)
         {
-            fillImage.color = Color.yellow;
+            fillHP.color = Color.yellow;
         }
         else
         {
-            fillImage.color = Color.green;
+            fillHP.color = Color.green;
         }
     }
 
