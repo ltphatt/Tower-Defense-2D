@@ -30,6 +30,7 @@ public class Health : MonoBehaviour
         scoreKeeper.ModifyScore(scoreReward);
         Destroy(gameObject);
         LevelManager.instance.IncreaseCurrency(coinReward);
+        AudioPlayer.instance.PlayDamageSound();
     }
 
     public int GetHealth()

@@ -31,12 +31,6 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    // void Start()
-    // {
-    //     currency = 100;
-    //     playerHealth = 100;
-    // }
-
     public void IncreaseCurrency(int amount)
     {
         currency += amount;
@@ -65,6 +59,7 @@ public class LevelManager : MonoBehaviour
     {
         playerHealth -= dmg;
         ShakeCamera();
+        AudioPlayer.instance.PlayGateSound();
     }
 
     public int GetPlayerHealth()
