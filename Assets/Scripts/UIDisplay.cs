@@ -18,7 +18,6 @@ public class UIDisplay : MonoBehaviour
     [Header("Enemy Wave")]
     [SerializeField] private Slider enemyWave;
 
-
     [Header("References")]
     EnemySpawner enemySpawner;
 

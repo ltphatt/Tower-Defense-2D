@@ -9,6 +9,7 @@ public class PauseGame : MonoBehaviour
     public static bool isPauseGame = false;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameplay;
+
     void Update()
     {
         // Khi người chơi ấn nút ESC ở bàn phím
