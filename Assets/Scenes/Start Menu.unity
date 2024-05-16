@@ -1692,6 +1692,14 @@ PrefabInstance:
       propertyPath: mainMenu
       value: 
       objectReference: {fileID: 1021493417}
+    - target: {fileID: 4665625186582429582, guid: 9ce3ec944a407da49a11bcfd4f50c910, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 5985553253017312950, guid: 7862ac7c131a6f54f90d968bce5ccac8, type: 3}
+    - target: {fileID: 4665625186582429582, guid: 9ce3ec944a407da49a11bcfd4f50c910, type: 3}
+      propertyPath: gamePlayCanvas
+      value: 
+      objectReference: {fileID: 3040209619992326288, guid: eb9ea9b7f2375f44e9343e7b05baa1dc, type: 3}
     - target: {fileID: 8426240342979500210, guid: 9ce3ec944a407da49a11bcfd4f50c910, type: 3}
       propertyPath: m_Name
       value: GameManager

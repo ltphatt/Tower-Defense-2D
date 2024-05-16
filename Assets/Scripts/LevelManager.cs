@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public const int MAX_HEALTH = 100;
     public static LevelManager instance;
     public int currency;
     public int playerHealth = 100;
-
     CameraShake cameraShake;
     [SerializeField] bool applyCameraShake;
+
 
     private void Awake()
     {
@@ -28,6 +29,15 @@ public class LevelManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (playerHealth <= 0)
+        {
+            GameManager.instance.GameOver();
+            playerHealth = MAX_HEALTH;
         }
     }
 
@@ -74,4 +84,5 @@ public class LevelManager : MonoBehaviour
             cameraShake.PlayShakeCamera();
         }
     }
+
 }

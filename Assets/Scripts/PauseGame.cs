@@ -9,8 +9,6 @@ public class PauseGame : MonoBehaviour
     public static bool isPauseGame = false;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameplay;
-    [SerializeField] private GameObject gameOver;
-
     void Update()
     {
         // Khi người chơi ấn nút ESC ở bàn phím
@@ -55,18 +53,4 @@ public class PauseGame : MonoBehaviour
         }
     }
 
-    public void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void SelectLevel()
-    {
-        SceneManager.LoadScene("Level selection");
-    }
-
-    public void BackToMainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
 }

@@ -5,13 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private GameObject gamePlayCanvas;
     [SerializeField] private float sceneLoadDelay = 1f;
-
     ScoreKeeper scoreKeeper;
 
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        Time.timeScale = 1f;
+
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
@@ -26,6 +35,20 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void RestartLevel()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene);
+
+        Time.timeScale = 1;
+    }
+
+    public void SelectLevel()
+    {
+        // TODO: Add select menu screen
+        Debug.Log("Select Level ...");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quitting game...");
@@ -34,7 +57,8 @@ public class GameManager : MonoBehaviour
 
     public void OpenSettingsMenu()
     {
-        mainMenu.SetActive(false);
+        // TODO: Add settings menu
+        Debug.Log("Opening Settings Menu...");
     }
 
     IEnumerator WaitAndLoad(string sceneName, float delay)
@@ -42,4 +66,12 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneName);
     }
+
+    public void GameOver()
+    {
+        gameOverCanvas.SetActive(true);
+        gamePlayCanvas.SetActive(false);
+        Time.timeScale = 0f;
+    }
+
 }
