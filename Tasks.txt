@@ -88,13 +88,15 @@ Hiện tại:
 	- Thêm canvas Pause Game
 	- Thêm nhạc trò chơi 
 	- Thêm sound effect khi click
+	- Thêm màn hình Game Over
+	- Thêm màn hình hoàn thành Level (3 sao, tính sao dựa vào số HP còn lại sau mỗi trận) - In Progress
+	- Thêm sound effect khi tiêu diệt kẻ địch và nhận được point và coin - In Progress
 	-------------------------------------------------------------------
 Tương lai gần:
-	- Thêm sound effect khi tiêu diệt kẻ địch và nhận được point và coin
+
 	- Thêm particle system cho bullets
-	- Thêm màn hình Game Over
-	- Thêm màn hình hoàn thành Level (3 sao, tính sao dựa vào số HP còn lại sau mỗi trận)
 	- Thiết kế 2 Level mới
+	- Thêm tính năng level-selection
 	- Thêm tính năng chuyển cảnh khi hoàn thành 1 Level
 	- Sửa logic game sao cho phù hợp với chức năng chuyển cảnh
 	- Test game
@@ -106,7 +108,7 @@ Tương lai xa:
 		Đạt được khi tiêu diệt các kẻ địch phát sáng ngẫu nhiên
 		Các item gồm (x2 điểm trong n giây, hồi hp, ...)
 	- Thêm tính năng nâng cấp súng khi click vào 1 tháp cụ thể (Tăng tốc đánh, bắn làm chậm, bắn xuyên,...)
-	- Thêm tính năng level-selection
+
 	- Thêm súng mới: súng làm chậm, súng ném bom
 	- Thêm quái mới: Xe tank, Máy bay, Người khổng lồ
 	

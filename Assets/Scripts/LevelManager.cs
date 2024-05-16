@@ -15,6 +15,10 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         ManageSingleton();
+    }
+
+    void Start()
+    {
         cameraShake = Camera.main.GetComponent<CameraShake>();
     }
 
@@ -84,5 +88,4 @@ public class LevelManager : MonoBehaviour
             cameraShake.PlayShakeCamera();
         }
     }
-
 }

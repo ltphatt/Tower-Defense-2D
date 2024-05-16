@@ -26,7 +26,10 @@ public class GameManager : MonoBehaviour
 
     public void LoadGame()
     {
+        Debug.Log("Reseting score...");
         scoreKeeper.ResetScore();
+
+        Debug.Log("Loading game...");
         StartCoroutine(WaitAndLoad("Level 1", sceneLoadDelay));
     }
 
