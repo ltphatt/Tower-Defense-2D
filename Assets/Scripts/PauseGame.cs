@@ -9,6 +9,7 @@ public class PauseGame : MonoBehaviour
     public static bool isPauseGame = false;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameplay;
+    [SerializeField] private GameObject gameOver;
 
     void Update()
     {

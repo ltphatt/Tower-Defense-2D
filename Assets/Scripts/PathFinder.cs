@@ -58,5 +58,4 @@ public class PathFinder : MonoBehaviour
             LevelManager.instance.DamagedByEnemy(damageToPlayer);
         }
     }
-
 }

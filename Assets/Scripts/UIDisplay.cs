@@ -13,6 +13,7 @@ public class UIDisplay : MonoBehaviour
 
     [Header("Score")]
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI highestScoreText;
     ScoreKeeper scoreKeeper;
 
     [Header("Enemy Wave")]
@@ -36,6 +37,8 @@ public class UIDisplay : MonoBehaviour
     void Update()
     {
         scoreText.text = $"Score: {scoreKeeper.GetScore().ToString("0000")}";
+        highestScoreText.text = $"Your Score: {scoreKeeper.GetScore()}";
+
         healthSlider.value = LevelManager.instance.playerHealth;
         enemyWave.value = enemySpawner.GetWaveSpawned();
         ModifyColorHPBar();
