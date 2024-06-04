@@ -11,9 +11,12 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem explosionEffect;
     ScoreKeeper scoreKeeper;
 
+    public bool isDie = false;
+
     void Start()
     {
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        isDie = false;
     }
 
     void TakeDamage(int dmg)
@@ -27,10 +30,13 @@ public class Health : MonoBehaviour
 
     void Die()
     {
+        isDie = true;
         scoreKeeper.ModifyScore(scoreReward);
-        Destroy(gameObject);
         LevelManager.instance.IncreaseCurrency(coinReward);
         AudioPlayer.instance.PlayDamageSound();
+        LevelManager.instance.IncreasingEnemyKilled();
+
+        Destroy(gameObject);
     }
 
     public int GetHealth()

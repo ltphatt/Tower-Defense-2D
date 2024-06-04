@@ -28,7 +28,6 @@ public class Bullet : MonoBehaviour
 
         Vector2 direction = (target.position - transform.position).normalized;
         rb.velocity = direction * bulletSpeed;
-
     }
 
     public void SetTarget(Transform target)

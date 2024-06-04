@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class LevelManager : MonoBehaviour
     CameraShake cameraShake;
     [SerializeField] bool applyCameraShake;
 
+    public int enemyKilled = 0;
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        enemyKilled = 0;
     }
 
     void ManageSingleton()
@@ -88,4 +91,19 @@ public class LevelManager : MonoBehaviour
             cameraShake.PlayShakeCamera();
         }
     }
+
+    public void IncreasingEnemyKilled()
+    {
+        enemyKilled++;
+    }
+
+    public void FinishLevel(int countEnemySpawned)
+    {
+        if (enemyKilled == countEnemySpawned)
+        {
+            int currentScenceIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentScenceIndex + 1);
+        }
+    }
+
 }
