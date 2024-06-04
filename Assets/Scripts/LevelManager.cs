@@ -101,8 +101,7 @@ public class LevelManager : MonoBehaviour
     {
         if (enemyKilled == countEnemySpawned)
         {
-            int currentScenceIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentScenceIndex + 1);
+            GameManager.instance.Victory();
             enemyKilled = 0;
         }
     }

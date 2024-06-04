@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private GameObject gamePlayCanvas;
+    [SerializeField] private GameObject gameVictoryCanvas;
     [SerializeField] private float sceneLoadDelay = 1f;
     ScoreKeeper scoreKeeper;
 
@@ -77,4 +78,16 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void Victory()
+    {
+        gameVictoryCanvas.SetActive(true);
+        gamePlayCanvas.SetActive(false);
+        Time.timeScale = 0f;
+    }
+
+    public void LoadNextLevel()
+    {
+        int currentScenceIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScenceIndex + 1);
+    }
 }
