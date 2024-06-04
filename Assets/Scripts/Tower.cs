@@ -16,4 +16,11 @@ public class Tower
         cost = _cost;
         prefab = _prefab;
     }
+
+    public Tower()
+    {
+        name = "";
+        cost = 0;
+        prefab = null;
+    }
 }

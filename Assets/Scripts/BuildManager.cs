@@ -6,14 +6,25 @@ public class BuildManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Tower[] towers;
-    private int selectedTower = 0;
+    [SerializeField] private Tower selectedTower;
+    private int selectedTowerIndex = 0;
 
     public static BuildManager instance;
 
     private void Awake()
     {
-        // instance = this;
         ManageSingleton();
+    }
+
+    void Start()
+    {
+        selectedTower = new Tower();
+        SetSelectedTower(0);
+    }
+
+    void Update()
+    {
+        selectedTower = GetSelectedTower();
     }
 
     void ManageSingleton()
@@ -33,11 +44,11 @@ public class BuildManager : MonoBehaviour
 
     public Tower GetSelectedTower()
     {
-        return towers[selectedTower];
+        return towers[selectedTowerIndex];
     }
 
     public void SetSelectedTower(int _selectedTower)
     {
-        selectedTower = _selectedTower;
+        selectedTowerIndex = _selectedTower;
     }
 }

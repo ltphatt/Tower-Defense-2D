@@ -103,6 +103,7 @@ public class LevelManager : MonoBehaviour
         {
             int currentScenceIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentScenceIndex + 1);
+            enemyKilled = 0;
         }
     }
 

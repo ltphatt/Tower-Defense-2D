@@ -51,6 +51,5 @@ public class Plot : MonoBehaviour
             isOccupied = true;
             AudioPlayer.instance.PlayClip(dropSound, dropSoundVolume);
         }
-
     }
 }
